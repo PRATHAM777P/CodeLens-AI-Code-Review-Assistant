@@ -2,6 +2,9 @@ import tempfile
 import subprocess
 import os
 import openai
+import logging
+
+logger = logging.getLogger(__name__)
 
 def get_openai_api_key():
     api_key = os.getenv('OPENAI_API_KEY')
@@ -57,7 +60,8 @@ def run_checkstyle(code):
             messages = ['No issues found.']
         return messages
     except Exception as e:
-        return [f'Checkstyle error: {str(e)}']
+        logger.exception("Error while running Checkstyle")
+        return ['Checkstyle error: internal error while running Checkstyle.']
     finally:
         os.unlink(tmp_path)
 
@@ -81,7 +85,8 @@ def run_openai_suggestions(code, language):
             suggestions = ['No suggestions at this time.']
         return suggestions
     except Exception as e:
-        return [f'Error from OpenAI: {str(e)}']
+        logger.exception("Error while getting OpenAI suggestions")
+        return ['Error from OpenAI: internal error while generating suggestions.']
 
 def run_openai_custom_prompt(code, language, prompt):
     openai.api_key = get_openai_api_key()
@@ -95,7 +100,8 @@ def run_openai_custom_prompt(code, language, prompt):
         )
         return response.choices[0].message['content'].strip()
     except Exception as e:
-        return f'Error from OpenAI: {str(e)}'
+        logger.exception("Error while processing OpenAI custom prompt")
+        return 'Error from OpenAI: internal error while processing custom prompt.'
 
 def analyze_code(code, language='python', prompt=None):
     if language == 'python':
