@@ -5,27 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Review Assistant</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+
+    <!-- Monaco Editor loader with Subresource Integrity (SRI) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"
+            integrity="sha384-SHA384_HASH_HERE"
+            crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Code Review Assistant</h1>
+
     <div id="editor" style="height: 300px; border: 1px solid #ccc;"></div>
+
     <label for="language">Language:</label>
     <select id="language">
         <option value="python">Python</option>
         <option value="java">Java</option>
     </select>
+
     <br><br>
+
     <label for="customPrompt">Custom AI Prompt:</label>
     <input type="text" id="customPrompt" placeholder="e.g., How can I optimize this function?" style="width: 60%;">
+
     <br><br>
+
     <button id="analyzeBtn">Analyze Code</button>
+
     <div id="outputPanel">
         <h2>Results</h2>
         <div id="quality"></div>
         <div id="security"></div>
         <div id="suggestions"></div>
     </div>
+
     <script src="app.js"></script>
 </body>
-</html> 
+</html>
