@@ -12,7 +12,6 @@
 [![Flask](https://img.shields.io/badge/Flask-3.0-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com)
 [![Monaco](https://img.shields.io/badge/Monaco_Editor-0.44-0078D4?style=flat-square&logo=visualstudiocode&logoColor=white)](https://microsoft.github.io/monaco-editor/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Security](https://img.shields.io/badge/Security-SECURITY.md-red?style=flat-square)](SECURITY.md)
 
 [Features](#-features) · [Demo](#-demo) · [Quick Start](#-quick-start) · [Usage](#-usage) · [API](#-api-reference) · [Contributing](#-contributing)
