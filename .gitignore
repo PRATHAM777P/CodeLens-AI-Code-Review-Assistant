@@ -1,0 +1,88 @@
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+wheels/
+
+# ── Virtual environments ───────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env/
+
+# ── Environment / secrets ─────────────────────────────────────
+.env
+.env.*
+*.env
+!.env.example        # keep the example template
+
+# ── API keys & credentials (NEVER commit these) ────────────────
+secrets.json
+credentials.json
+*.key
+*.pem
+*.p12
+*.pfx
+config/local.py
+config/secrets.py
+
+# ── OS files ───────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── IDEs ────────────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ── Logs ────────────────────────────────────────────────────────
+*.log
+logs/
+*.out
+
+# ── Node (if frontend tooling added later) ──────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.npm/
+
+# ── Test / coverage ─────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# ── Checkstyle config (may contain local paths) ─────────────────
+checkstyle*.xml
+
+# ── Temporary files ─────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+
+# ── Flask instance folder ───────────────────────────────────────
+instance/
