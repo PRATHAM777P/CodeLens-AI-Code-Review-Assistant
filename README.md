@@ -197,7 +197,6 @@ code-review-assistant/
 ├── docs/
 │   └── banner.png          # README banner image
 │
-├── .env.example            # Environment variable template (safe to commit)
 ├── .gitignore              # Excludes secrets, venvs, caches
 ├── CONTRIBUTING.md         # Dev setup & PR guidelines
 ├── SECURITY.md             # Security policy & responsible disclosure
