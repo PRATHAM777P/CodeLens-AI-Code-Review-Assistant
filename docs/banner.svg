@@ -1,0 +1,134 @@
+<svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0e14"/>
+      <stop offset="100%" stop-color="#12151f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c6fff"/>
+      <stop offset="100%" stop-color="#5eb8ff"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c6fff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#5eb8ff" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="40" result="blur"/>
+    </filter>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bg)" rx="16"/>
+
+  <!-- Grid lines -->
+  <g stroke="#2d3252" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="340"/>
+    <line x1="250" y1="0" x2="250" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/>
+    <line x1="550" y1="0" x2="550" y2="340"/>
+    <line x1="700" y1="0" x2="700" y2="340"/>
+    <line x1="850" y1="0" x2="850" y2="340"/>
+    <line x1="1000" y1="0" x2="1000" y2="340"/>
+    <line x1="1150" y1="0" x2="1150" y2="340"/>
+  </g>
+
+  <!-- Glow blob left -->
+  <ellipse cx="200" cy="170" rx="220" ry="180" fill="url(#glow)" filter="url(#blur)"/>
+  <!-- Glow blob right -->
+  <ellipse cx="1050" cy="200" rx="180" ry="150" fill="#3ddc97" fill-opacity="0.05" filter="url(#blur)"/>
+
+  <!-- Decorative hexagons -->
+  <polygon points="60,50 80,39 100,50 100,72 80,83 60,72" fill="none" stroke="#7c6fff" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="1100,260 1120,249 1140,260 1140,282 1120,293 1100,282" fill="none" stroke="#5eb8ff" stroke-width="1.5" opacity="0.4"/>
+  <polygon points="1060,80 1072,73 1084,80 1084,94 1072,101 1060,94" fill="none" stroke="#3ddc97" stroke-width="1" opacity="0.35"/>
+  <polygon points="150,280 162,273 174,280 174,294 162,301 150,294" fill="none" stroke="#ffc857" stroke-width="1" opacity="0.35"/>
+
+  <!-- Main logo hex -->
+  <polygon points="88,158 116,142 144,158 144,190 116,206 88,190" fill="url(#accent)" opacity="0.15" filter="url(#glow-filter)"/>
+  <polygon points="88,158 116,142 144,158 144,190 116,206 88,190" fill="none" stroke="url(#accent)" stroke-width="2" filter="url(#glow-filter)"/>
+  <text x="116" y="178" text-anchor="middle" font-size="22" fill="url(#accent)" filter="url(#glow-filter)">⬡</text>
+
+  <!-- Title -->
+  <text x="170" y="162" font-size="52" font-weight="800" fill="white" font-family="'Syne', sans-serif" letter-spacing="-2">CodeLens</text>
+
+  <!-- Gradient underline -->
+  <rect x="170" y="172" width="380" height="3" fill="url(#accent)" rx="2" opacity="0.9"/>
+
+  <!-- Subtitle -->
+  <text x="170" y="205" font-size="17" fill="#a8b2d8" letter-spacing="0.5">AI-Powered Code Review Assistant</text>
+
+  <!-- Tag pills -->
+  <rect x="170" y="225" width="110" height="28" rx="14" fill="#7c6fff" fill-opacity="0.15" stroke="#7c6fff" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="225" y="244" text-anchor="middle" font-size="11" fill="#7c6fff" font-weight="600">🐍 Python</text>
+
+  <rect x="292" y="225" width="130" height="28" rx="14" fill="#5eb8ff" fill-opacity="0.12" stroke="#5eb8ff" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="357" y="244" text-anchor="middle" font-size="11" fill="#5eb8ff" font-weight="600">🟡 JavaScript</text>
+
+  <rect x="434" y="225" width="96" height="28" rx="14" fill="#3ddc97" fill-opacity="0.12" stroke="#3ddc97" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="482" y="244" text-anchor="middle" font-size="11" fill="#3ddc97" font-weight="600">☕ Java</text>
+
+  <rect x="542" y="225" width="90" height="28" rx="14" fill="#ffc857" fill-opacity="0.12" stroke="#ffc857" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="587" y="244" text-anchor="middle" font-size="11" fill="#ffc857" font-weight="600">+5 more</text>
+
+  <!-- Right: Feature cards -->
+  <g transform="translate(700, 60)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="220" height="64" rx="10" fill="#1a1e2e" stroke="#2d3252" stroke-width="1"/>
+    <rect x="0" y="0" width="3" height="64" rx="1.5" fill="#7c6fff"/>
+    <text x="20" y="24" font-size="13" fill="#7c6fff">🔍</text>
+    <text x="42" y="24" font-size="12" font-weight="700" fill="#e8ecf8">Quality Analysis</text>
+    <text x="42" y="44" font-size="10.5" fill="#636d94">pylint · eslint · cppcheck</text>
+
+    <!-- Card 2 -->
+    <rect x="240" y="0" width="220" height="64" rx="10" fill="#1a1e2e" stroke="#2d3252" stroke-width="1"/>
+    <rect x="240" y="0" width="3" height="64" rx="1.5" fill="#ff5e6c"/>
+    <text x="260" y="24" font-size="13" fill="#ff5e6c">🔒</text>
+    <text x="282" y="24" font-size="12" font-weight="700" fill="#e8ecf8">Security Scanning</text>
+    <text x="282" y="44" font-size="10.5" fill="#636d94">bandit · AI-powered review</text>
+
+    <!-- Card 3 -->
+    <rect x="0" y="82" width="220" height="64" rx="10" fill="#1a1e2e" stroke="#2d3252" stroke-width="1"/>
+    <rect x="0" y="82" width="3" height="64" rx="1.5" fill="#ffc857"/>
+    <text x="20" y="106" font-size="13" fill="#ffc857">💡</text>
+    <text x="42" y="106" font-size="12" font-weight="700" fill="#e8ecf8">AI Suggestions</text>
+    <text x="42" y="126" font-size="10.5" fill="#636d94">GPT-3.5 · Best practices</text>
+
+    <!-- Card 4 -->
+    <rect x="240" y="82" width="220" height="64" rx="10" fill="#1a1e2e" stroke="#2d3252" stroke-width="1"/>
+    <rect x="240" y="82" width="3" height="64" rx="1.5" fill="#3ddc97"/>
+    <text x="260" y="106" font-size="13" fill="#3ddc97">📊</text>
+    <text x="282" y="106" font-size="12" font-weight="700" fill="#e8ecf8">Complexity Metrics</text>
+    <text x="282" y="126" font-size="10.5" fill="#636d94">Cyclomatic · Maintainability</text>
+
+    <!-- Card 5 -->
+    <rect x="0" y="164" width="220" height="64" rx="10" fill="#1a1e2e" stroke="#2d3252" stroke-width="1"/>
+    <rect x="0" y="164" width="3" height="64" rx="1.5" fill="#5eb8ff"/>
+    <text x="20" y="188" font-size="13" fill="#5eb8ff">🤖</text>
+    <text x="42" y="188" font-size="12" font-weight="700" fill="#e8ecf8">Custom AI Q&amp;A</text>
+    <text x="42" y="208" font-size="10.5" fill="#636d94">Ask anything about your code</text>
+
+    <!-- Card 6 -->
+    <rect x="240" y="164" width="220" height="64" rx="10" fill="#1a1e2e" stroke="#2d3252" stroke-width="1"/>
+    <rect x="240" y="164" width="3" height="64" rx="1.5" fill="#a8b2d8"/>
+    <text x="260" y="188" font-size="13" fill="#a8b2d8">🕒</text>
+    <text x="282" y="188" font-size="12" font-weight="700" fill="#e8ecf8">Analysis History</text>
+    <text x="282" y="208" font-size="10.5" fill="#636d94">Session-based · Export JSON</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="315" width="1200" height="25" fill="#12151f" rx="0"/>
+  <rect x="0" y="324" width="1200" height="16" fill="#0c0e14"/>
+  <text x="600" y="335" text-anchor="middle" font-size="10" fill="#636d94" letter-spacing="0.05em">Flask · Monaco Editor · OpenAI GPT-3.5 · pylint · bandit · eslint</text>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="1198" height="338" fill="none" stroke="#2d3252" stroke-width="1.5" rx="16"/>
+</svg>
