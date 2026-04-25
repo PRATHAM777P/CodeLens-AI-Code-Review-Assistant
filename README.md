@@ -106,7 +106,7 @@ Overall: Low  |  Cyclomatic ≈ 2  |  Maintainability: 78/100
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/code-review-assistant.git
+git clone https://github.com/PRATHAM777P/code-review-assistant.git
 cd code-review-assistant
 ```
 
